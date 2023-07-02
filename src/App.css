@@ -1,0 +1,226 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family:cursive,Arial, Helvetica, sans-serif;
+}
+a{
+  text-decoration: none;
+  display:inline-block;
+}
+p{
+  margin:0;
+}
+button{
+  background-color: transparent;
+}
+label{
+  width: auto;
+  height: auto;
+}
+/* 
+      HEADER.JS ------------------------------------------------------------------------------------
+*/
+img[class~="logo"]{
+  width: 150px;
+  height: 50px;
+}
+i[class~="bi-search"]{
+  font-size: 25px;
+  color:black;
+}
+i[class~="bi-cart"]{
+  font-size: 27px;
+  color:black;
+}
+i[class~="user"]{
+  font-size: 40px;
+  color: black;
+}
+.nav{
+  justify-content: space-between;
+}
+.userIcon{
+  justify-content: flex-end;
+}
+.busqueda{
+  margin-top: 3px;
+}
+.navItem{
+  margin: 0 1.1rem;
+}
+.navItemBotton{
+  border:none;
+}
+.searchBar{
+  border: none;
+  border-bottom: 1px solid rgb(44, 38, 38);
+  width: 30%;
+  margin-right:1rem;
+}
+.header{
+  background-color:#ffffff;
+}
+/* 
+      HOME.JS ------------------------------------------------------------------------------------
+*/
+.encabezadoProduct{
+  font-size: 1.8em;
+}
+.bannerAnimation{
+  height: 600px;
+  opacity: 0.4;
+}
+.css-selector {
+  background: linear-gradient(304deg, #e8a51d, #e3520f, #ab47ee);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 42s ease infinite;
+  -moz-animation: AnimationName 42s ease infinite;
+  -o-animation: AnimationName 42s ease infinite;
+  animation: AnimationName 42s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+img[class~="banner"]{
+  width: 100%;
+}
+.big-banner{
+  background-image: url(./images/pared.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 508px;
+  background-size: 100% 100%;
+}
+img[class~="mueble-banner"]{
+  width: 507px;
+  height: 200px;
+}
+img[class~="cuadro"]{
+  width: 300px;
+  height: 150px;
+}
+.display-banner{
+  margin: 40px 0;
+}
+i[class~="arrow"]{
+  font-size: 30px;
+  padding: 0 10px;
+}
+.items{
+  background-color: red;
+}
+.items-container{
+  display: 	grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-items: center;
+}
+
+/* 
+      PRODUCTO.JS -------------------------------------------------------------------------------------------------
+*/
+img[class~="producto-imagen"]{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+}
+.image-container{
+  min-height:800px;
+  width: 100%;
+  background-color: rgba(232,228,219,255)
+}
+.margin-box{
+  min-height: 50px;
+  width: 100%;
+}
+.product-imagen-box{
+  width: 100%;
+  height: 660px;
+}
+.review-container{
+  width: 100px;
+  height: 100%;
+}
+.review-box{
+  border:2px solid black;
+}
+.imagen-box{
+  height:660px;
+  width:610px;
+}
+.blank-container{
+  height: 40px;
+  width: 100%;
+}
+.blank-box{
+  width: 710px;
+  height: 100%;
+}
+/*Descripcion del producto*/
+i[class~="bi-arrow-left-short"]{
+  font-size: 2em;
+}
+.product-container{
+  height: 500px;
+}
+.text-back{
+  font-size: 1.2em;
+}
+.text-product-container{
+  line-height: normal;
+  margin-top: 2em;
+}
+.quality-contanier{
+  margin:1em 0;
+}
+.text-title-product{
+  font-size: 2.5em;
+  line-height:40px;
+}
+.text-author-product{
+  font-size: 1.25em;
+}
+.text-quality{
+  font-size: 0.85em;
+  opacity:80%;
+}
+.desc-container{
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid black ;
+}
+.text-desc{
+  opacity: 80%;
+}
+
+.text-price{
+  font-size: 1.6em;
+}
+
+.text-shipping{
+  opacity: 80%;
+  font-size: 1.1em;
+}
+.buttom-add-cart{
+  margin-top: 2em;
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+p{
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+.container-xl{
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    
+}
+.craftContainer{
+    border-top: 0.3em solid black;
+    border-bottom: 0.3em solid black;
+}
+.craftContainer form{
+    width: 100%;
+}
+.firstContainer{
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 2rem;
+    border-bottom: 0.15em solid black;
+    min-height: 50px;
+}
+
+.secondContainer p{
+    font-size: 1.4rem;
+}
+.secondContainer{
+    border-bottom: 0.15em solid black;
+    min-height: 350px;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 2rem;
+}
+.sizeBox input{
+    width: 6rem;
+}
+.colorsContainer{
+    height: 100%;
+    padding: 2em 0;
+}
+.standarSize{
+    display: grid;
+    height: 6rem;
+    min-width: 195px;
+    grid-template-columns: 50% 50%;
+}
+.standarSize .btn-info{
+    width: 80%;
+    height: 2.5rem;
+}
+.frameColor{
+    width: 50%;
+    min-width: 20rem;
+}
+.frameSizeBox{
+    width: 40%;
+}
+.sizeContainer{
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+/* --------------------Extra options ----------------------*/
+.frameExtra{
+    position: relative;
+    width: 100%;
+    min-width: 260px;
+    min-height: 100px;
+}
+.checkExtra{
+    width: 30%;
+    min-width: 15rem;
+}
+.checkExtra label{
+    width:auto;
+    height: auto;
+}
+.checkExtra input{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+input[type='file']{
+    width: auto;
+    height: auto;
+}
+.additionalGroupOne{
+    width: 50%;
+}
+.additionalGroupTwo{
+    width: 50%;
+}
+/* MensajePop */
+.checkExtra .messagePop{
+    display: none;
+    position: relative;
+    left:25%;
+    top:70%;
+    
+}
+#popInfoAcrilico:hover .messagePop{
+    display:inline-block;
+    position: absolute;
+
+}
+
+/* Paspartu component */
+.paspatuOption{
+    flex-wrap: wrap;
+}
+.cuadrado{
+    height:10.5rem;
+    width:15rem;
+    background-color: green;
+    border: 0.5rem solid #000000 ;
+    /* margin: 3rem; */
+}
+.row1{
+    background-color: #fff;
+    height: 50%;
+    width: 100%;
+}
+.row2{
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+}
+.artePaspartu{
+    height:5rem;
+    width:20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 1.5rem;
+}
+.lineaRow1{
+    height: 100%;
+    width: 3px;
+    
+}
+.lineaRow1.select{
+    background-color: #0000ff;
+}
+.lineaRow2{
+    height: 3px;
+    width: 100%;
+}
+.lineaRow2.select{
+    background-color: #ff0000;
+}
+.buttonsPaspartu{
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+
+.customizePaspartu input{
+    width: 5rem;
+    height: 2.5rem;
+}
+.inputPaspartuWidth input{
+    border-color:#0000ff;
+    background-color:#0000ff;
+}
+.inputPaspartuHeight input{
+    border-color:#ff0000;
+    background-color: #ff0000;
+}
+.paspartuBlank{
+    min-height: 40px;
+    width: 100%;
+}
+/* IMAGEN Y PRECIOS */
+.imagen{
+    flex-grow: 1;
+    min-width: 293px;
+    min-height: 406px;
+    max-width: 400px;
+    border-top: 0.3em solid #000000;
+    border-bottom: 0.3em solid #000000;
+}
+.imgFrame{
+    width: 100%;
+    height: 400px;
+    border-bottom:0.15em solid #000000;
+}
+.priceFrame{
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+
+
+
