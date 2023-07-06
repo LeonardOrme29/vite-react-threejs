@@ -54,17 +54,17 @@ function Login() {
                 <h2>LOGIN</h2>
                 <form action='POST'>
                 <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                     <input type='email' className='form-control' aria-describedby="emailHelp" onChange={(e)=>{setCorreo(e.target.value)}} placeholder='Correo Electronico'/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <div id="emailHelp" className="form-text">Well never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type='password' className="form-control" onChange={(e)=>{setPassword(e.target.value)}} placeholder='Contraseña'/>
                 </div> 
                 <div className="mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div>
                 <button type="submit" onClick={submit} className="btn btn-primary">Submit</button>
                 </form>

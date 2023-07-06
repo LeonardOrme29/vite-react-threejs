@@ -9,10 +9,10 @@ export const authSlice=createSlice({
         addAuth:(state,action)=>{
             state.user=action.payload; //payload === la data
         },
-        logout:(state)=>{
+        logOut:(state)=>{
             state.user=null;
         }
     }
 })
-export const {addAuth,logout}=authSlice.actions;
+export const {addAuth,logOut}=authSlice.actions;
 export default authSlice.reducer;
