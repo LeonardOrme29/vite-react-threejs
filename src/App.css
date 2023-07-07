@@ -30,18 +30,6 @@ img[class~="logo"]{
   width: 150px;
   height: 50px;
 }
-i[class~="bi-search"]{
-  font-size: 25px;
-  color:black;
-}
-i[class~="bi-cart"]{
-  font-size: 27px;
-  color:black;
-}
-i[class~="user"]{
-  font-size: 40px;
-  color: black;
-}
 .nav{
   justify-content: space-between;
 }
@@ -76,6 +64,9 @@ i[class~="user"]{
 }
 .carousel-item{
   height: 100%;
+}
+.bannerMobile{
+  display: none;
 }
 /* Banner craft */
 .containerBannerCraft{
@@ -203,7 +194,6 @@ i[class~="bi-arrow-left-short"]{
 .text-price{
   font-size: 1.6em;
 }
-
 .text-shipping{
   opacity: 80%;
   font-size: 1.1em;
@@ -212,3 +202,11 @@ i[class~="bi-arrow-left-short"]{
   margin-top: 2em;
 }
 
+@media only screen and (max-width:900px){
+  .bannerDesktop{
+    display: none;
+  }
+  .bannerMobile{
+    display: block;
+  }
+}

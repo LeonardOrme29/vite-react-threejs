@@ -1,9 +1,8 @@
 import {useState, useEffect} from 'react'
-import imgBanner1 from '../images/banner-muebleV2.png'
-import imgBanner2 from '../images/textura-madera.jpg'
-import imgBanner3 from '../images/pared.png'
 import Products from '../components/Products'
 import axios from 'axios'
+import imagenes from '../exports/imgBanner.js'
+import imagenesMobile from '../exports/imgBannerMobile.js'
 
 
 function Home() {
@@ -15,11 +14,13 @@ function Home() {
     const res=await axios.get('http://localhost:3001/producto/cuadro2');
     setListaProductos(res.data);
   }
+  const [imgBanner1, imgBanner2, imgBanner3] = imagenes;
+  const [imgBannerMobile1,imgBannerMobile2,imgBannerMobile3]=imagenesMobile
   return (
     <>
-    {/*Inicio del Banner */}
-      <div className='banner'>
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      {/*Inicio del Banner 1920 */}
+      <div className='bannerDesktop'>
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -41,6 +42,35 @@ function Home() {
             <span className="visually-hidden">Previous</span>
           </button>
           <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      {/*Inicio del Banner Mobile */}
+      <div className='bannerMobile'>
+        <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src={imgBannerMobile1} className="d-block w-100" style={{maxHeight:'600px'}} alt="Banner nro 1"/>
+            </div>
+            <div className="carousel-item">
+              <img src={imgBannerMobile2} className="d-block w-100" style={{maxHeight:'600px'}} alt="Banner nro 2"/>
+            </div>
+            <div className="carousel-item">
+              <img src={imgBannerMobile3} className="d-block w-100" style={{maxHeight:'600px'}} alt="Banner nro 3"/>
+            </div>
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
