@@ -46,7 +46,7 @@ nav ul li a:hover{
 	color:#fff;
 }
 .bi-cart{
-	font-size: 22px;
+	font-size: 24px;
 	color:#fff;
 }
 .bi-person-circle{
@@ -78,15 +78,25 @@ nav ul li a:hover{
 }
 .searchBar{
 	border: none;
-	border-bottom: 1px solid rgb(44, 38, 38);
+	border-bottom: 1px solid #fff;
 	width: 30%;
 	margin-right:1rem;
 	background-color: transparent;
+	color:#ffffff;
+}
+.searchBar::placeholder{
+	color:#ffffff;
 }
 .itemMobileNav:hover{
 	background-color: #d86504;
 }
 .iconsContainerMobileNav{
+	display: none;
+}
+.hamburgerButton{
+	padding-top: 2px;
+	width: 25px;
+	height: 20px;
 	display: none;
 }
 
@@ -147,8 +157,70 @@ nav ul li a:hover{
 	.searchBar{
 		width: 50%;
 	}
+	.iconSocialMediaMobile{
+		width: 100%;
+		flex:1;
+		padding: 0 0.5em;
+		padding-bottom:80px;
+		align-items:end;
+	}
+	.iconSocialMediaMobile .bi{
+		color:#fff;
+		font-size: 30px;
+		height: 45px;
+	}
+	/* HAMBURGER TOGGLERBAR */
+	.hamburgerButton{
+		display: block;
+	}
+	.hamburgerContainer{
+		width: 25px;
+		height: 20px;
+		position: absolute;
+		top: 32px;
+		cursor: pointer;
+	}
+	.bar{
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background: #fff;
+		transition: all 0.3s;
+	}
+	.bar.middleBar {
+		top: 50%;
+		margin-top: -2px;
+	}
+	.bar.bottomBar {
+		bottom: 0;
+	}
+	.hamburgerContainer.active{
+	z-index: 2;
+		animation: rotateHamburger 0.5s linear 0s forwards;
+	}
+	.hamburgerContainer.active .bar.topBar{
+	transform: translateY(9px) rotate(45deg);
+	}
+	.hamburgerContainer.active .bar.middleBar {
+	width: 0;
+	}
+	.hamburgerContainer.active .bar.bottomBar {
+	transform: translateY(-8px) rotate(-45deg);
+	}
+	/* Animations */
+	@keyframes rotateHamburger {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+	}
 }
 @media only screen and (max-width: 400px) {
+	.bi-cart{
+		padding-right: 0.5em;
+	}
 	.containerMobileNav{
 		width: 80%;
 	}
@@ -165,6 +237,6 @@ nav ul li a:hover{
 		display: none;
 	}
 	.searchBar{
-		width: 80%;
+		width: 100%;
 	}
 }
