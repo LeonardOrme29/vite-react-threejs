@@ -1,4 +1,3 @@
-import * as THREE from 'three'
 import { useSelector } from 'react-redux';
 import { CuadroIluminado } from './CuadroIluminado';
 import { CuadroDoble } from './CuadroDoble';

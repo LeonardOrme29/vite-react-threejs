@@ -1,36 +1,75 @@
-
 import '../estilos/footer.css'
+import { Link } from 'react-router-dom'
+import logo from '../images/logo.png'
 
 function Footer (){
   return (
-    <div>
-      <div className='space px-4 '></div>
-      <div className='mainContainerFooter d-flex flex-row justify-content-between align-items-center px-4'>
-        <div className='contactContainer d-flex flex-column'>
-          <p className='footerTitulo'>Contáctanos</p>
-          <p>TAAL Creations & Art</p>
-          <p>Lima</p>
-          <p>Perú</p>
-          <p>taalcreationsandart@gmail.com</p>
-        </div>
-        <div className='contactContainer d-flex flex-column'>
-          <p className='footerTitulo'>Información</p>
-          <p>Política de privacidad</p>
-          <p>Política de devoluciones</p>
-          <p>Política de envíos</p>
-          <p>Términos de servicio</p>
-        </div>
-        <div className='contactContainer d-flex flex-column'>
-          <p className='footerTitulo'>Acerca de TAAL</p>
-          <p>Instagram</p>
-          <p>Facebook</p>
-          <p>Tik Tok</p>
-          <p>Correo</p>
-        </div>
+    <div style={{background:'#fb7e14'}}>
+      <div className='footerContainer container-xxl flex-column justify-content-center align-items-center'>
+          <div className='spaceFooter'></div>
+            <div className='footerContent d-flex align-items-center justify-content-between'>
+              <div className='imgFooterLogo d-flex align-items-center'>
+                <img src={logo}/>
+              </div>
+              <div className='footerText d-flex flex-column'>
+                  <h5>Información</h5>
+                  <Link>Términos y Condiciones</Link>
+                  <Link>Política de Privacidad</Link>
+                  <Link>Cookies</Link>
+              </div>
+                <div className='footerText d-flex flex-column'>
+                  <h5>Contáctanos</h5>
+                  <p>TAAL Creations and Art</p>
+                  <p>Lima, Perú</p>
+                  <a href="mailto:taalcreationsandart@gmail.com">taalcreationsandart@gmail.com</a>
+                </div>
+                <div className='footerText d-flex flex-column justify-content-center'>
+                  <h5>Redes Sociales</h5>
+                  <Link>Instagram</Link>
+                  <Link>Facebook</Link>
+                  <Link>Tik Tok</Link>
+                </div>
+            </div>
+          <div className='spaceFooter footerText d-flex justify-content-end'><p>©2023 TAAL Creations & Art</p></div>
       </div>
-      <div className='space px-4 d-flex justify-content-end align-items-center'>
-        <p>©2023 TAAL Creations & Art</p>
-      </div>
+      {/*--------------- MOBILE FOOTER ----------------------*/}
+      <div className='mobileFooterContainer'>
+          <div className="accordion accordion-flush" id="accordionFlushExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="flush-headingTwo">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Información Legal
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div className='accordion-body footerText d-flex flex-column'>
+                    <Link>Términos y Condiciones</Link>
+                </div>
+                <div className='accordion-body footerText d-flex flex-column'>
+                    <Link>Política de Privacidad</Link>
+                </div>
+                <div className='accordion-body footerText d-flex flex-column'>
+                    <Link>Cookies</Link>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="flush-headingThree">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Contáctanos
+                </button>
+              </h2>
+              <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div className='accordion-body footerText d-flex flex-column'>
+                  <Link>Correo Electrónico</Link>
+                </div>
+                <div className='accordion-body footerText d-flex flex-column'>
+                  <Link>Telegram</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }

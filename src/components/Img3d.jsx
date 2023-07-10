@@ -11,7 +11,7 @@ function Img3d() {
   return (
     <>
       <Canvas camera={{zoom: 1}}>
-        <ambientLight intensity={0.2}/>
+        <ambientLight />
         <Environment map={envMap} background />
         <Mascara/>
         <OrbitControls makeDefault rotateSpeed={1.5} minPolarAngle={0} maxPolarAngle={Math.PI/1.5} />

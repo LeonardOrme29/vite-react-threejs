@@ -59,7 +59,7 @@ function Header() {
   return (
     <>
     <div className='headerMainContainer d-flex flex-column justify-content-center'>
-      <div className='containerHeader container-xl d-flex align-items-center'>
+      <div className='containerHeader container-xxl d-flex align-items-center'>
         <div className='containerLogoNav d-flex'>
           <Link to={'/'}>
             <div className='containerImgLogo'>

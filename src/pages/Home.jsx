@@ -3,6 +3,7 @@ import Products from '../components/Products'
 import axios from 'axios'
 import imagenes from '../exports/imgBanner.js'
 import imagenesMobile from '../exports/imgBannerMobile.js'
+import imgBannerCraft from '../images/bannerCraft.png'
 
 
 function Home() {
@@ -78,21 +79,77 @@ function Home() {
       </div>
       {/*Inicio del Banner a medida */}
       <div className='containerBannerCraft d-flex'>
-        <div className='container-xxl d-flex'>
-          <div className='infoBannerCraft d-flex flex-column justify-content-center'>
-            <h2>CREA TU CUADRO</h2>
-            <div className='sloganBannerCraft d-flex flex-column'>
-              <div className='d-flex justify-content-between'>
-                <h4>Adapta tu</h4>
-                <h4 id='sloganLinedText'>arte al cuadro</h4>
+        <div className='container-xxl d-flex justify-content-center'>
+          <div className='d-flex justify-content-center' style={{height:'100%',flexGrow:'0.15'}}>
+            <div className='infoBannerCraft d-flex flex-column justify-content-center'>
+              <h2>CREA TU CUADRO</h2>
+              <div className='sloganBannerCraft d-flex flex-column'>
+                <div className='d-flex justify-content-between'>
+                  <h4>Adapta tu</h4>
+                  <h4 id='sloganLinedText'>arte al cuadro</h4>
+                </div>
+                <h4 id='sloganPropuse'>cuadro al arte</h4>
               </div>
-              <h4 id='sloganPropuse'>cuadro al arte</h4>
+              <button type="button" className="buttonBannerCraft">Constrúyelo</button>
             </div>
-            <button type="button" className="btn btn-outline-warning">Constrúyelo</button>
           </div>
-          <div className='imgBannerCraft'></div>
+          <div className='imgBannerCraft d-flex justify-content-center'>
+            <img src={imgBannerCraft}/>
+          </div>
         </div>
       </div>
+{/* ------------TYPE OF FRAMES------------ */}
+      <div className='container-xxl'>
+        <div className='typeFrameContainer d-flex flex-column align-items-center'>
+          <h2>Tipos de Cuadros</h2>
+          <div className='flat TypeContainer d-flex'>
+            <div className='flat InfoContainer d-flex flex-column'>
+              <h3>Plano</h3>
+              <p>El cuadro plano es un cuadro pensado para aquellas personas que quieran enmarcar un momento para siempre... </p>
+              <button type="button" className="buttonBannerCraft">Ver más</button>
+            </div>
+            <div className='imgTypeContainer'>
+              <img src={imgBannerCraft}/>
+            </div>
+          </div>
+
+          <div className='box TypeContainer d-flex'>
+            <div className='imgTypeContainer'>
+              <img src={imgBannerCraft}/>
+            </div>
+            <div className='box InfoContainer d-flex flex-column'>
+              <h3>Box</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+              <button type="button" className="buttonBannerCraft">Ver más</button>
+            </div>
+          </div>
+          {/* DOUBLE FRAME AND GLASS */}
+          <h3 className='doublesTypeHeader'>Dobles</h3>
+          <div className='doubleTypeContainer d-flex'>
+            <div className='doubleGlass TypeConatiner d-flex flex-column'>
+              <div className='imgTypeContainer'>
+                <img src={imgBannerCraft}/>
+              </div>
+              <div className='doubleGlass InfoContainer'>
+                <h3>Doble Vidrio</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+                <button type="button" className="buttonBannerCraft">Ver más</button>
+              </div>
+            </div>
+            <div className='doubleFrame TypeConatiner d-flex flex-column'>
+              <div className='imgTypeContainer'>
+                <img src={imgBannerCraft}/>
+              </div>
+              <div className='doubleGlass InfoContainer'>
+                <h3>Doble Marco</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+                <button type="button" className="buttonBannerCraft">Ver más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{/* ------------PRODUCTS--------------- */}
       <div className='container-xl'>
         <div className='encabezadoProduct'>
           Nuestros Productos

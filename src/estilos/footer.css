@@ -1,22 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-p{
-    font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+.footerContainer{
+  height: 250px;
+  width: 100%;
+  display: flex;
+}
+.footerContent{
+  height: 200px;
+  width: 100%;
+  border-top:2px solid #000;
+  border-bottom:2px solid #000;
+  padding: 0 .5em;
+}
+.imgFooterLogo img{
+  width: 150px;
+}
+.spaceFooter{
+  height: 25px;
+  width: 100%;
+}
+.footerText p,.footerText h5,.footerText a{
+  color: #000;
+}
+.mobileFooterContainer{
+  display: none;
 }
 
-.space{
-    height: 50px;
+@media only screen and (max-width:900px){
+  .footerContainer{
+    display: none;
+  }
+  .mobileFooterContainer{
+    display: block;
     width: 100%;
-    background-color:darkorange;
-}
-.mainContainerFooter{
-    height: 250px;
-    width: 100%;
-    border-top: 1.5px solid black;
-    border-bottom: 1.5px solid black;
-    background-color:darkorange;
-}
-.footerTitulo{
-    font-size: 1.25rem;
-    font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight:bolder; 
+    padding: 1.5em 0;
+  }
+  .accordion{
+    border-top: 2px solid var(--textHF);
+    border-bottom: 2px solid var(--textHF);
+    margin:1em;
+  }
+  .accordion-header{
+    background-color: transparent;
+  }
+  .accordion-button{
+    background-color: transparent;
+    color:var(--textHF);
+  }
+  .accordion-item{
+    background-color: transparent;
+  }
+  .accordion-button:not(.collapsed){
+    background-color: #d86504;
+    color: var(--darkTextHF);
+  }
+  .accordion-button:focus{
+    box-shadow:none;
+  }
+  .accordion-body a{
+    color:var(--textHF);
+  }
 }

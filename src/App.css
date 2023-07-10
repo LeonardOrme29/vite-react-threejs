@@ -1,10 +1,14 @@
+:root{
+  --textHF:#ffffff;
+  --darkTextHF:#bcbbbb;
+}
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
-  font-family:cursive,Arial, Helvetica, sans-serif;
+  font-family: 'Fredoka','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #root{
   overflow: auto;
@@ -22,32 +26,6 @@ button{
 label{
   width: auto;
   height: auto;
-}
-/* 
-      HEADER.JS ------------------------------------------------------------------------------------
-*/
-img[class~="logo"]{
-  width: 150px;
-  height: 50px;
-}
-.nav{
-  justify-content: space-between;
-}
-.userIcon{
-  justify-content: flex-end;
-}
-.busqueda{
-  margin-top: 3px;
-}
-.navItem{
-  margin: 0 1.1rem;
-}
-.navItemBotton{
-  border:none;
-}
-
-.nav p{
-  color:#000000
 }
 /* 
       HOME.JS ------------------------------------------------------------------------------------
@@ -71,25 +49,27 @@ img[class~="logo"]{
 /* Banner craft */
 .containerBannerCraft{
   width:100%;
-  height: 25rem;
+  min-height: 300px;
+  height: 30vh;
+  max-height: 400px;
   background-color: #5296A5;
 }
 .infoBannerCraft{
-  max-width: 400px;
+  width: 300px;
 }
 .infoBannerCraft h2{
   display: inline-block;
   font-family: 'Fredoka', sans-serif;
   font-weight: 500;
-  font-size: 5.8rem;
+  font-size: 4.45em;
   color:#000000;
   text-align: left;
-  line-height: 100px;
+  line-height: 60px;
 }
 .sloganBannerCraft h4{
   font-family: 'Fredoka', sans-serif;
   font-weight: 400;
-  font-size:2.2rem;
+  font-size:1.69em;
   color:#000000;
   line-height: 20px;
 }
@@ -100,7 +80,75 @@ img[class~="logo"]{
 #sloganPropuse{
   text-align: right;
 }
+.imgBannerCraft{
+  width: 576px;
+  height: 100%;
+  flex-grow: 1;
+}
+.imgBannerCraft img{
+  width: 500px;
+}
+.buttonBannerCraft{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #fb7e14;
+  font-family: 'Fredoka','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:#fff;
+  transition: background-color 0.5s ease,color 0.5s ease;
+  height: 40px;
+  margin-top: .5em;
+  font-size: 1.5em;
+}
+.buttonBannerCraft:hover{
+  background-color: #d86504;
+  color:#bcbbbb;
+}
+
 /* Frames Types */
+
+.typeFrameContainer{
+  width: 100%;
+}
+.typeFrameContainer h2{
+  font-weight: 500;
+  font-size: 4.5em;
+  padding: .5em 0;
+}
+.InfoContainer{
+  flex-grow: 1;
+}
+.InfoContainer h3{
+  font-weight: 400;
+  font-size: 3.5em;
+  text-decoration: underline;
+}
+.InfoContainer p{
+  font-weight: 300;
+  font-size: calc(0.9em + 0.3vw);
+}
+.doubleTypeContainer{
+  flex-wrap: wrap;
+}
+.doublesTypeHeader{
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 3.5em;
+  width: 95%;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.doubleGlass{
+  margin-right: 1em;
+}
+.doubleFrame{
+  margin-left: 1em;
+}
 /* Our Products */
 .encabezadoProduct{
   font-size: 1.8em;
@@ -112,6 +160,14 @@ img[class~="logo"]{
   display: 	grid;
   grid-template-columns: 25% 25% 25% 25%;
   justify-items: center;
+}
+.imgTypeContainer{
+  flex-grow: 3;
+  min-width: 600px;
+  max-width: 700px;
+}
+.imgTypeContainer img{
+  width: 100%;
 }
 
 /* 
@@ -190,7 +246,6 @@ i[class~="bi-arrow-left-short"]{
 .text-desc{
   opacity: 80%;
 }
-
 .text-price{
   font-size: 1.6em;
 }
@@ -203,10 +258,69 @@ i[class~="bi-arrow-left-short"]{
 }
 
 @media only screen and (max-width:900px){
+  /* BANNER PRINCIPAL */
   .bannerDesktop{
     display: none;
   }
   .bannerMobile{
     display: block;
   }
+  /* BANNER CRAFT */
+  .containerBannerCraft{
+    width:100%;
+    min-height: 150px;
+    height: calc(17vh + 5vw);
+    max-height: 250px;
+    background-color: #5296A5;
+  }
+  .infoBannerCraft{
+    width: 150px;
+  }
+  .infoBannerCraft h2{
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    font-size: 2.2em;
+    color:#000000;
+    text-align: left;
+    line-height: 30px;
+  }
+  .sloganBannerCraft h4{
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+    font-size:.84em;
+    color:#000000;
+    line-height: 4px;
+  }
+  #sloganLinedText{
+    color:#ff0000;
+    text-decoration: line-through;
+  }
+  #sloganPropuse{
+    text-align: right;
+  }
+  .imgBannerCraft{
+    width: 100px;
+    height: 100%;
+    flex-grow: 1;
+  }
+  .imgBannerCraft img{
+    height: 100%;
+  }
+  .buttonBannerCraft{
+    height: 24px;
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .imgBannerCraft{
+    width: 100px;
+    height: 100%;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .imgBannerCraft img{
+    height: calc(1vh + 22vw);
+  }
+  
 }
