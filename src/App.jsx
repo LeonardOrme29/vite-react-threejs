@@ -8,6 +8,7 @@ import Producto from './pages/Producto';
 //import Craft from './pages/Craft'
 import Login from './components/Login.jsx';
 import Signup from './components/Signup.jsx';
+import Gallery from './pages/Gallery';
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='craft' element={<Craft/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='signup' element={<Signup/>}/>
+          <Route path='gallery' element={<Gallery/>}/>
           </Route>
         </Routes>
       </Suspense>

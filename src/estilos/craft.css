@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-p{
-    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+.craftContainer p{
+    color:#000000;
+}
+.priceFrame p{
+    color: #000000;
 }
 .container-xl{
     flex-wrap: wrap;

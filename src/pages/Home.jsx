@@ -99,7 +99,7 @@ function Home() {
         </div>
       </div>
 {/* ------------TYPE OF FRAMES------------ */}
-      <div className='container-xxl'>
+      <div className='desktoptypeFrameContainer container-xxl'>
         <div className='typeFrameContainer d-flex flex-column align-items-center'>
           <h2>Tipos de Cuadros</h2>
           <div className='flat TypeContainer d-flex'>
@@ -130,7 +130,7 @@ function Home() {
               <div className='imgTypeContainer'>
                 <img src={imgBannerCraft}/>
               </div>
-              <div className='doubleGlass InfoContainer'>
+              <div className='InfoContainer'>
                 <h3>Doble Vidrio</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
                 <button type="button" className="buttonBannerCraft">Ver más</button>
@@ -140,12 +140,51 @@ function Home() {
               <div className='imgTypeContainer'>
                 <img src={imgBannerCraft}/>
               </div>
-              <div className='doubleGlass InfoContainer'>
+              <div className='InfoContainer'>
                 <h3>Doble Marco</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
                 <button type="button" className="buttonBannerCraft">Ver más</button>
               </div>
             </div>
+          </div>
+
+          {/* DOBLE CANVAS */}
+          <h3 className='doublesTypeHeader'>Canvas</h3>
+          <div className='doubleTypeContainer d-flex'>
+            <div className='doubleGlass TypeConatiner d-flex flex-column'>
+              <div className='imgTypeContainer'>
+                <img src={imgBannerCraft}/>
+              </div>
+              <div className='InfoContainer'>
+                <h3>Enmarcado</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+                <button type="button" className="buttonBannerCraft">Ver más</button>
+              </div>
+            </div>
+            <div className='doubleFrame TypeConatiner d-flex flex-column'>
+              <div className='imgTypeContainer'>
+                <img src={imgBannerCraft}/>
+              </div>
+              <div className='InfoContainer'>
+                <h3>Marco Flotante</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+                <button type="button" className="buttonBannerCraft">Ver más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* MOBILE TYPE PRODUCTS */}
+      <div className='container-xxl d-flex flex-column align-items-center'>
+        <h2>Tipos de Marco</h2>
+        <div className='mobileTypeContainer d-flex align-items-center'>
+          <div className='mobileImgTypeContainer' style={{minWidth:'100%'}}>
+            <div style={{width:'100%',height:'300px',backgroundColor:'red'}}></div>
+          </div>
+          <div className='mobileInfoTypeContainer'>
+            <h3>Plano</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+            <button type="button" className="buttonBannerCraft">Ver más</button>
           </div>
         </div>
       </div>

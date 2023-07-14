@@ -10,12 +10,12 @@
 body{
   font-family: 'Fredoka','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#root{
-  overflow: auto;
-}
 a{
   text-decoration: none;
   display:inline-block;
+}
+a:hover{
+  color:none;
 }
 p{
   margin:0;
@@ -128,9 +128,12 @@ label{
 .InfoContainer p{
   font-weight: 300;
   font-size: calc(0.9em + 0.3vw);
+  color: #000000;
 }
 .doubleTypeContainer{
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 .doublesTypeHeader{
   display: flex;
@@ -144,11 +147,14 @@ label{
   margin-bottom: 1em;
 }
 .doubleGlass{
-  margin-right: 1em;
+  width: 630px;
+  padding: 0 9px;
 }
 .doubleFrame{
-  margin-left: 1em;
+  width: 630px;
+  padding: 0 9px;
 }
+
 /* Our Products */
 .encabezadoProduct{
   font-size: 1.8em;
@@ -306,10 +312,26 @@ i[class~="bi-arrow-left-short"]{
   }
   .imgBannerCraft img{
     height: 100%;
+    width: auto;
   }
   .buttonBannerCraft{
     height: 24px;
     font-size: 1em;
+  }
+  /* TYPES FRAMES */
+  .desktoptypeFrameContainer{
+    display: none;
+  }
+  .mobileTypeContainer{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .mobileInfoTypeContainer{
+    padding-left: 1em;
+    min-width: 250px
+  }
+  .mobileInfoTypeContainer p{
+    color:#000000
   }
 }
 @media only screen and (max-width: 600px) {

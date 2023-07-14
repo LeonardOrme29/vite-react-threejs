@@ -1,7 +1,7 @@
 
 import {Canvas} from '@react-three/fiber'
 import { Mascara } from '../components3d/mascara'
-import { Environment,OrbitControls, useEnvironment } from '@react-three/drei'
+import { useEnvironment,Environment,OrbitControls} from '@react-three/drei'
 
 
 //dpr={[1, 2]} orthographic camera={{ position: [-10, 10, 10], zoom: 100 }}

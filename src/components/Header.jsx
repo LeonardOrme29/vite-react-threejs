@@ -10,12 +10,14 @@ function Header() {
   const[showUserOptions,setShowUserOptions]=useState(false)
   const[querySearch,setQuerySearch]=useState('');
   const authState=useSelector(state=>state.auth)
+  
   const rootElement = document.querySelector('#mainRoot');
   if (showToggleBar) {
     rootElement.style.overflow = 'hidden';
   } else {
     rootElement.style.overflow = 'auto';
   }
+
   let usuario;
   if(authState.user!=null){
     usuario=authState.user;
@@ -72,7 +74,7 @@ function Header() {
                 <Link to={'/craft'}>A medida</Link>
               </li>
               <li className='navItem'>
-                <Link>Galeria</Link>
+                <Link to={'/gallery'}>Galeria</Link>
               </li>
               <li className='navItem'>
                 <Link>Regalo</Link>
@@ -129,22 +131,24 @@ function Header() {
               <button type="submit" onClick={(e)=>{handleSearchSubmit(e.target.value)}}><i className="bi bi-search"></i></button>
             </form>
           </div>
-          <Link to={'/craft'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>A medida</p></Link>
-          <Link to={'/product'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>Galería</p></Link>
-          <Link to={'/'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>Regalo</p></Link>
-          <Link to={'/'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>Colecciones</p></Link>
-          <Link to={'/'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>Inspiración</p></Link>
-          <div style={{backgroundColor:'#ffffff',width:'100%',height:'2px',margin:'0.5em 0'}}></div>
-          <div style={{width:'100%'}}>
-            <Link to={'/login'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>Iniciar Sesión</p></Link>
-            <Link to={'/signup'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p>Registrarse</p></Link>
+          <div className='mobileMenuBar'>
+          <Link to={'/craft'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>A medida</p></Link>
+          <Link to={'/gallery'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>Galería</p></Link>
+          <Link to={'/'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>Regalo</p></Link>
+          <Link to={'/'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>Colecciones</p></Link>
+          <Link to={'/'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>Inspiración</p></Link>
           </div>
-          <div style={{backgroundColor:'#ffffff',width:'100%',height:'2px',margin:'0.5em 0'}}></div>
-          <div className='iconSocialMediaMobile d-flex justify-content-between'>
-            <i className="bi bi-instagram"></i>
-            <i className="bi bi-facebook"></i>
-            <i className="bi bi-tiktok"></i>
-            <i className="bi bi-telegram"></i>
+          <div className='mobileBarUserOptions'>
+            <Link to={'/login'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>Iniciar Sesión</p></Link>
+            <Link to={'/signup'} onClick={handleToggerClick} className='itemMobileNav d-flex align-items-center justify-content-end'><p className='mobileOptionsNav'>Registrarse</p></Link>
+          </div>
+          <div className='mobileSocialMediaContainer'>
+            <div className='iconSocialMediaMobile d-flex justify-content-between'>
+              <Link to={'https://www.instagram.com/'} target='_blank' rel="noopener noreferrer"><i className="bi bi-instagram"></i></Link>
+              <Link to={'https://www.facebook.com/'} target='_blank' rel="noopener noreferrer"><i className="bi bi-facebook"></i></Link>
+              <Link to={'https://www.tiktok.com'} target='_blank' rel="noopener noreferrer"><i className="bi bi-tiktok"></i></Link>
+              <Link to={'https://web.telegram.org'} target='_blank' rel="noopener noreferrer"><i className="bi bi-telegram"></i></Link>
+            </div>
           </div>
         </div>
     </div>
