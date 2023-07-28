@@ -1,9 +1,8 @@
-
+import { Link } from 'react-router-dom'
 import '../estilos/productos.css'
-
 function Products (props){
   return (
-    <button>
+    <Link to={`/product/${props.id}`}>
       <div className='pContainer d-flex flex-column'>
         <div className='pContainerImg d-flex flex-row justify-content-center align-items-center'>
           <div className='prueba'></div>
@@ -15,7 +14,7 @@ function Products (props){
           <p className='pTag'>{props.pTag}</p>
         </div>
     </div>
-    </button>
+    </Link>
   )
 }
 

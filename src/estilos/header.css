@@ -49,13 +49,31 @@ a:hover{
 	justify-content: space-between;
 }
 .bi-search{
-	font-size: 20px;
+	font-size: 25px;
+}
+.cartContainer{
+	position: relative;
 }
 .bi-cart{
-	font-size: 24px;
+	font-size: 30px;
+}
+.bi-cart:hover{
+	color: var(--darkTextHF);
+}
+.circleCart{
+	min-width: 20px;
+	height: 20px;
+	background-color: var(--darkTextHF);
+	position: absolute;
+	border-radius: 10px;
+	text-align:center;
+	color:#fff;
+	font-size: 0.9em;
+	line-height: 20px;
+	right: -8px;
 }
 .bi-person-circle{
-	font-size: 25px;
+	font-size: 30px;
 }
 .bi-list{
 	display: none;
@@ -245,8 +263,11 @@ a:hover{
 	}
 }
 @media only screen and (max-width: 400px) {
-	.bi-cart{
-		padding-right: 0.5em;
+	.cartContainer{
+		padding-right: 1em;
+	}
+	.circleCart{
+		right: 7px;
 	}
 	.containerMobileNav{
 		width: 80%;

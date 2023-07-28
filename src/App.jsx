@@ -1,7 +1,7 @@
 
 import './App.css';
 import { lazy,Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home';
 import Producto from './pages/Producto';
@@ -9,6 +9,7 @@ import Producto from './pages/Producto';
 import Login from './components/Login.jsx';
 import Signup from './components/Signup.jsx';
 import Gallery from './pages/Gallery';
+import Cart from './pages/Cart';
 
 
 
@@ -32,6 +33,8 @@ function App() {
           <Route path='login' element={<Login/>}/>
           <Route path='signup' element={<Signup/>}/>
           <Route path='gallery' element={<Gallery/>}/>
+          <Route exact path='product/:id' element={<Producto/>}/>
+          <Route path='cart' element={<Cart/>}/>
           </Route>
         </Routes>
       </Suspense>

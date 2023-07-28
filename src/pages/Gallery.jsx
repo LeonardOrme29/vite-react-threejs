@@ -14,8 +14,8 @@ import MeshGallery from '../components/MeshGallery';
 //const cImg = require.context('../images/cuadros/cImg', true);
 function Gallery() {
   return (
-    <div className='container-xxl d-flex flex-column align-items-center' style={{width:'100%'}}>
-      <MeshGallery cImg={[cImg1,cImg2,cImg3,cImg4,cImg5]} vImg={[vImg1]} hImg={[hImg1,hImg2,hImg3]}/>
+    <div className='container-xxl d-flex flex-column align-items-center' style={{ width: '100%' }}>
+      <MeshGallery cImg={[cImg1, cImg2, cImg3, cImg4, cImg5]} vImg={[vImg1]} hImg={[hImg1, hImg2, hImg3]} />
       {/* PAGINATION CONTROL */}
       <div className='galleryControler'>
         <nav aria-label="Page navigation example">

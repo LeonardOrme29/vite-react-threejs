@@ -4,17 +4,12 @@ import axios from 'axios'
 import imagenes from '../exports/imgBanner.js'
 import imagenesMobile from '../exports/imgBannerMobile.js'
 import imgBannerCraft from '../images/bannerCraft.png'
+import { Link } from 'react-router-dom'
+import ProductSlider from '../components/ProductSlider'
+import SecondProductSlider from '../components/SecondProductSlider'
 
 
 function Home() {
-  const [listaProductos,setListaProductos]=useState([]);
-  useEffect(()=>{
-    getProductos()
-  },[])
-  const getProductos= async ()=>{
-    const res=await axios.get('http://localhost:3001/producto/cuadro2');
-    setListaProductos(res.data);
-  }
   const [imgBanner1, imgBanner2, imgBanner3] = imagenes;
   const [imgBannerMobile1,imgBannerMobile2,imgBannerMobile3]=imagenesMobile
   return (
@@ -175,32 +170,65 @@ function Home() {
         </div>
       </div>
       {/* MOBILE TYPE PRODUCTS */}
-      <div className='container-xxl d-flex flex-column align-items-center'>
+      <div className='mobileContainer container-xxl flex-column align-items-center'>
         <h2>Tipos de Marco</h2>
-        <div className='mobileTypeContainer d-flex align-items-center'>
-          <div className='mobileImgTypeContainer' style={{minWidth:'100%'}}>
-            <div style={{width:'100%',height:'300px',backgroundColor:'red'}}></div>
+        <div className='mobileTypeWrap d-flex justify-content-center' style={{width:'100%',columnGap:'1em',rowGap:'1em'}}>
+          <div className='mobileTypeContainer d-flex flex-column align-items-center'>
+            <div className='mobileImgTypeContainer'>
+              <div className='imgMobileType'></div>
+            </div>
+            <div className='mobileInfoTypeContainer'>
+              <h3>Plano</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+              <button type="button" className="buttonBannerCraft">Ver más</button>
+            </div>
           </div>
-          <div className='mobileInfoTypeContainer'>
-            <h3>Plano</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
-            <button type="button" className="buttonBannerCraft">Ver más</button>
+          <div className='mobileTypeContainer d-flex flex-column align-items-center'>
+            <div className='mobileImgTypeContainer'>
+              <div className='imgMobileType'></div>
+            </div>
+            <div className='mobileInfoTypeContainer'>
+              <h3>Box</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim erat eu est fermentum, vel hendrerit sem consectetur. Integer tincidunt, velit a efficitur viverra, dui justo tristique leo, eu convallis elit enim eget dui. Sed bibendum sem a efficitur fermentum. </p>
+              <button type="button" className="buttonBannerCraft">Ver más</button>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className='ourProductsContainer'>
+        <div className='container-xxl d-flex flex-column align-items-center'>
+          <div className='encabezadoOurProduct'>
+            Nuestros Productos
+          </div>
+          <ProductSlider/>
         </div>
       </div>
 {/* ------------PRODUCTS--------------- */}
-      <div className='container-xl'>
-        <div className='encabezadoProduct'>
-          Nuestros Productos
+      {/* <div className='ourProductsContainer'>
+        <div className='container-xxl d-flex flex-column align-items-center'>
+          <div className='encabezadoProduct'>
+            Nuestros Productos
+          </div>
+          <div className='d-flex' style={{width:'100%',height:'100%'}}>
+            <div className='ourProductsControl d-flex align-items-center justify-content-center'>
+              <i className="bi bi-caret-left"></i>
+            </div>
+            <div className='d-flex flex-row justify-content-start' style={{columnGap:'1em'}}>
+              <Link to={'/product'}><Products img='gallery' pNombre='CUADRO DOBLE MARCO' pDesc='Una triste descripcion del porducto cuadro doble marco' pCost='S/19.90'/></Link>
+              {listaProductos.slice(0, 4).map((producto) => (
+                <Products key={producto.nomProducto} img='gallery' pNombre={producto.nomProducto} 
+                pDesc={producto.descProducto} 
+                pCost={`S/${producto.precioProducto}`}/>
+              ))}
+            </div>
+            <div className='ourProductsControl d-flex align-items-center justify-content-center'>
+              <i className="bi bi-caret-right"></i>
+            </div>
+          </div>
         </div>
-        <div className='d-flex flex-row flex-nowrap justify-content-between'>
-          {listaProductos.map(producto=>(
-          <Products img='gallery'pNombre={producto.nomProducto} pDesc={producto.descProducto} pCost={`S/${producto.precioProducto}`}/>
-        ))}
-          <a href='/product'><Products img='gallery' pNombre='CUADRO DOBLE MARCO' pDesc='Una triste descripcion qu' pCost='$19.90'/></a>
-        </div>
-      </div>
-      <div className='container-xl'>
+      </div> */}
+
+      {/* <div className='container-xl'>
         <div className='itemsButton'>
           <button className='btn btn-primary'>Planos</button>
           <button className='btn btn-primary'>Box</button>
@@ -211,7 +239,7 @@ function Home() {
             <Products img='gallery'pNombre={producto.nomProducto} pDesc={producto.descProducto} pCost={`S/${producto.precioProducto}`}/>
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

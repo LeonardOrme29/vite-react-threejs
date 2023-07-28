@@ -92,7 +92,10 @@ function Header() {
           <button onClick={()=>{setShowSearchNav(!showSearchNav);setShowUserOptions(false);setShowToggleBar(false)}}>
             <i className="bi bi-search responsiveIconOff"></i>
           </button>
-          <i className="bi bi-cart"></i>
+          <Link className='cartContainer' to={'/cart'}>
+            <i className="bi bi-cart"></i>
+            <span className='circleCart'>1</span>
+          </Link>
           {usuario!=null ? (
             <div className="btn-group">
               <button ref={userIconRef} type="button" className={`navItemBottom ${!showUserOptions ? 'noDropdown' : 'show'}`} data-bs-toggle="dropdown" onClick={()=>{setShowUserOptions(!showUserOptions);setShowToggleBar(false);setShowSearchNav(false)}} aria-expanded="false">

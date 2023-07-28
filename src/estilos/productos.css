@@ -1,40 +1,148 @@
-.pContainer{
-    background-color: red;
-    margin: 0.5rem 0;
-    height: 300px;
-    width: 250px;
-    border-radius: 1.5%;
+/* PRODUCT */
+.pContainer {
+  background-color: red;
+  border-radius: 1.5%;
+  width: calc(10vh + 10vw);
+  max-width: 200px;
+  min-width: 150px;
 }
-.pContainerImg{
-    width: 250px;
-    height: 250px;
+.pContainerImg {
+  width: 100%;
+  max-width: 210px;
+  max-height: 210px;
+  min-width: 120px;
 }
-.prueba{
-    background-color: coral;
-    width: 200px;
-    height: 200px;
-    border-radius: 2%;
+.prueba {
+  background-color: coral;
+  margin: 0.3em;
+  width: 100%;
+  max-height: 200px;
+  height: calc(10vh + 10vw);
+  min-width: 140px;
+  min-height: 140px;
+  border-radius: 2%;
 }
-.pDesc{
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow: ellipsis;
+.pInfo {
+  padding: 0.5em;
+  padding-top: 0;
+  width: calc(10vh + 10vw);
+  max-width: 200px;
+  min-width: 150px;
 }
-.pInfo{
-    padding: 0.5rem;
-    padding-top: 0;
+.pNombre {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.pNombre{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.2rem;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow: ellipsis;
+.pDesc {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 95%;
 }
-.pCost{
-    align-self: self-end;
+.pCost {
+  align-self: self-end;
+  font-size: 1.2em;
 }
-button{
-    border:none;
-    text-align: left;
+button {
+  border: none;
+  text-align: left;
+}
+/* 
+      PRODUCTO.JS -------------------------------------------------------------------------------------------------
+*/
+img[class~="producto-imagen"] {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.image-container {
+  min-height: 800px;
+  width: 100%;
+  background-color: rgba(232, 228, 219, 255);
+}
+.margin-box {
+  min-height: 50px;
+  width: 100%;
+}
+.product-imagen-box {
+  width: 100%;
+  height: 660px;
+}
+.review-container {
+  width: 100px;
+  height: 100%;
+}
+.review-box {
+  border: 2px solid black;
+}
+.imagen-box {
+  height: 660px;
+  width: 610px;
+}
+.blank-container {
+  height: 40px;
+  width: 100%;
+}
+.blank-box {
+  width: 710px;
+  height: 100%;
+}
+/*Descripcion del producto*/
+i[class~="bi-arrow-left-short"] {
+  font-size: 2em;
+  color: #000;
+}
+.product-container {
+  height: 500px;
+}
+.text-back {
+  font-size: 1.2em;
+  color: #000;
+}
+.text-product-container {
+  line-height: normal;
+  margin-top: 2em;
+}
+.quality-contanier {
+  margin: 1em 0;
+}
+.text-title-product {
+  font-size: 2.5em;
+  line-height: 40px;
+  color: #000;
+}
+.text-author-product {
+  font-size: 1.25em;
+  color: #000;
+}
+.text-quality {
+  font-size: 0.85em;
+  opacity: 80%;
+  color: #000;
+}
+.desc-container {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid black;
+  color: #000;
+}
+.text-desc {
+  opacity: 80%;
+  color: #000;
+}
+.text-price {
+  font-size: 1.6em;
+  color: #000;
+}
+.text-shipping {
+  opacity: 80%;
+  font-size: 1.1em;
+  color: #000;
+}
+.buttom-add-cart {
+  margin-top: 2em;
+  color: #000;
 }
